@@ -9,13 +9,14 @@ const entryPointByEnv = () => {
   if (process.env.FRAMGIA_STAGING) {
     env = "sunasterisk_staging"
   } else {
-    env = process.env.RAILS_ENV || "staging"
+    env = process.env.RAILS_ENV || "local"
   }
+  console.log("Entry point: ", config[env].environmentConfig.entryPoint)
   return config[env].environmentConfig.entryPoint
 }
 
 const DEFAULT_API_CONFIG: AxiosRequestConfig = {
-  baseURL: entryPointByEnv,
+  baseURL: entryPointByEnv(),
   timeout: 30000,
   apiVersion: 'v1',
   headers: {'X-Skyrec-Access-Token': ''}

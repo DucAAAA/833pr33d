@@ -3,7 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { compose, createStore, applyMiddleware } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 
-import rootSaga from '../sagas/rootSaga'
+import rootSaga from '../sagas/root-saga'
 import rootReducer from '../reducers/root-reducer'
 
 const persistConfig = {
