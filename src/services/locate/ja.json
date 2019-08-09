@@ -2,5 +2,9 @@
   "not found": {
     "text not found": "404 - ページが見つかりません",
     "btn redirect": "フォームリストに戻る"
+  },
+  "login": {
+    "btn submit": "ログイン",
+    "forgot password": "パスワードを忘れた"
   }
 }

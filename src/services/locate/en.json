@@ -2,5 +2,9 @@
   "not found": {
     "text not found": "404 - Page not found",
     "btn redirect": "Go back to template list"
+  },
+  "login": {
+    "btn submit": "Login",
+    "forgot password": "I forgot my password"
   }
 }

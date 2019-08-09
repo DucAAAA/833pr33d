@@ -3,10 +3,10 @@ import { Button } from 'antd'
 import { compose } from 'recompose'
 import { withTranslation } from 'react-i18next';
 
-import styles from './style.module.css'
+import styles from './style.module.scss'
 
-import logo from '../../assests/images/logo.svg'
-import image404 from '../../assests/images/404.png'
+import logo from '../../../assests/images/logo.svg'
+import image404 from '../../../assests/images/404.png'
 
 export default compose(
   withTranslation('not found')
