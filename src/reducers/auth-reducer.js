@@ -1,11 +1,16 @@
 import { handleActions } from 'redux-actions'
 
-import { clearStateAuth } from '../actions/auth-action'
+import { clearStateAuth, updateStateAuth } from '../actions/auth-action'
 
 export const initialState = {
   isAuth: false
 };
 
 export default handleActions({
-  [clearStateAuth]: () => ({...initialState})
+  [clearStateAuth]: () => ({...initialState}),
+  [updateStateAuth]: (state, action) => {
+    return {
+      ...state, ...action.payload
+    }
+  }
 }, initialState);

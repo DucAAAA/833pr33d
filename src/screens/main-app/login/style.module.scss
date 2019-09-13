@@ -1,0 +1,73 @@
+.mainLogin {
+  display: flex;
+  height: 100vh;
+}
+
+.banner {
+  background-image: url('../../../assests/images/Bg_Login.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 40%;
+}
+
+.miniLogo {
+  margin: 3rem;
+  width: 14%;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+
+  & > * {
+    color: var(--white);
+  }
+}
+
+.h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.h3 {
+  font-size: 2rem;
+}
+
+.formLogin {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 60%;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 45rem;
+}
+
+.inputField {
+  font-size: 1.5rem;
+  height: 5rem;
+  margin: 0.5rem 0;
+}
+
+.button {
+  font-weight: bold;
+  height: 5rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.footer {
+  bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+}
