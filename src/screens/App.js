@@ -12,8 +12,13 @@ import SwichRoute from "../components/Routes/SwichRoute"
 
 import Login from "./main-app/login"
 import LandingPage from "./commons/landing-page"
-import NotFound from "./commons/404-not-found"
 import TemplateList from "./main-app/templates-list"
+import TaskList from "./main-app/tasks-list"
+import UserManagement from "./main-app/user-management"
+import IpManagement from "./main-app/ip-management"
+import Profile from "./main-app/profile"
+import UsageSituation from "./main-app/usage-situation"
+import MainLayout from "../components/layouts/main-layout"
 
 import "./App.css";
 
@@ -24,11 +29,16 @@ function App() {
         <PersistGate persistor={persistor}>
           <Router history={history}>
             <Switch>
-              <PrivateRoute exact path="/templates" component={TemplateList} />
-              <PublicRoute exact path="/login" component={Login} />
-              <Route exact path="/home" component={LandingPage} />
+              <PrivateRoute exect path="/tasks" layout={MainLayout} component={TaskList} />
+              <PrivateRoute exect path="/profile" layout={MainLayout} component={Profile} />
+              <PrivateRoute exect path="/usage" layout={MainLayout} component={UsageSituation} />
+              <PrivateRoute exect path="/users" layout={MainLayout} component={UserManagement} />
+              <PrivateRoute exect path="/templates" layout={MainLayout} component={TemplateList} />
+              <PrivateRoute exect path="/ip-restrictions" layout={MainLayout} component={IpManagement} />
+              <PublicRoute exect path="/login" component={Login} />
+              <Route exect path="/home" component={LandingPage} />
               <SwichRoute exect path="/" />
-              <Route component={NotFound} />
+
             </Switch>
           </Router>
         </PersistGate>

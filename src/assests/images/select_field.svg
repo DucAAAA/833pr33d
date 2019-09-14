@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="531" height="105" viewBox="0 0 531 105">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6367" data-name="Rectangle 6367" width="531" height="105" fill="#28282e" opacity="0.3"/>
+    </clipPath>
+  </defs>
+  <g id="Group_5130" data-name="Group 5130" transform="translate(0)">
+    <g id="Mask_Group_375" data-name="Mask Group 375" clip-path="url(#clip-path)">
+      <g id="Rectangle_6369" data-name="Rectangle 6369" transform="translate(86.287)" fill="none" stroke="#ced3d6" stroke-width="2">
+        <rect width="345.15" height="150" rx="2" stroke="none"/>
+        <rect x="1" y="1" width="343.15" height="148" rx="1" fill="none"/>
+      </g>
+    </g>
+    <g id="Rectangle_6357" data-name="Rectangle 6357" transform="translate(266.828 16)" fill="none" stroke="#9b9ea3" stroke-width="2">
+      <rect width="143.37" height="18" rx="2" stroke="none"/>
+      <rect x="1" y="1" width="141.37" height="16" rx="1" fill="none"/>
+    </g>
+    <g id="Rectangle_6358" data-name="Rectangle 6358" transform="translate(266.828 71)" fill="none" stroke="#9b9ea3" stroke-width="2">
+      <rect width="143.37" height="18" rx="2" stroke="none"/>
+      <rect x="1" y="1" width="141.37" height="16" rx="1" fill="none"/>
+    </g>
+    <g id="Rectangle_6359" data-name="Rectangle 6359" transform="translate(266.828 44)" fill="none" stroke="#9b9ea3" stroke-width="2">
+      <rect width="143.37" height="18" rx="2" stroke="none"/>
+      <rect x="1" y="1" width="141.37" height="16" rx="1" fill="none"/>
+    </g>
+    <text id="Data_overview" data-name="Data overview" transform="translate(107.527 58)" fill="#9b9ea3" font-size="14" font-family="ArialMT, Arial" letter-spacing="0.006em"><tspan x="0" y="0">Address</tspan></text>
+    <text id="Data_overview-2" data-name="Data overview" transform="translate(107.527 85)" fill="#9b9ea3" font-size="14" font-family="ArialMT, Arial" letter-spacing="0.006em"><tspan x="0" y="0">Phone Number </tspan></text>
+    <text id="Data_overview-3" data-name="Data overview" transform="translate(107.527 28)" fill="#9b9ea3" font-size="14" font-family="ArialMT, Arial" letter-spacing="0.006em"><tspan x="0" y="0">Name</tspan></text>
+    <rect id="Rectangle_5950" data-name="Rectangle 5950" width="151.335" height="22" transform="translate(262.845 42)" fill="#0da6d0" opacity="0.2"/>
+    <g id="Group_5129" data-name="Group 5129" transform="translate(258.199 37.5)">
+      <g id="Rectangle_5950-2" data-name="Rectangle 5950" transform="translate(4.646 3.5)" fill="none" stroke="#0da6d0" stroke-width="1">
+        <rect width="151.335" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="150.335" height="23" fill="none"/>
+      </g>
+      <g id="Ellipse_105" data-name="Ellipse 105" fill="#0da6d0" stroke="#fafafa" stroke-width="1">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="4.5" fill="none"/>
+      </g>
+      <g id="Ellipse_107" data-name="Ellipse 107" transform="translate(150.008)" fill="#0da6d0" stroke="#fff" stroke-width="1">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="4.5" fill="none"/>
+      </g>
+      <g id="Ellipse_106" data-name="Ellipse 106" transform="translate(0 22)" fill="#0da6d0" stroke="#fff" stroke-width="1">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="4.5" fill="none"/>
+      </g>
+      <g id="Ellipse_108" data-name="Ellipse 108" transform="translate(150.008 22)" fill="#0da6d0" stroke="#fff" stroke-width="1">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="4.5" fill="none"/>
+      </g>
+    </g>
+    <g id="h3OoWl_2_" transform="translate(414.737 62.945)">
+      <g id="Group_2636" data-name="Group 2636">
+        <path id="Path_3469" data-name="Path 3469" d="M5.61,13.991C4.3,14.849,3.051,15.7,1.771,16.511a6.68,6.68,0,0,1-1.1.455,3.391,3.391,0,0,1-.309-.921Q.155,8.325,0,.593C0,.4.183.2.3,0a3.693,3.693,0,0,1,.731.222q7.93,5.179,15.845,10.4c.183.117.38.371.323.508s-.408.265-.647.3c-1.8.222-3.6.434-5.483.646.112.2.2.381.309.551C12.921,15.113,14.453,17.613,16,20.1c.408.657.281.911-.562,1.218-1.054.371-2.123.741-3.177,1.112-.914.318-1.237.233-1.659-.445C9.068,19.509,7.536,17.041,6,14.563A4.452,4.452,0,0,1,5.61,13.991Z" fill="#28282e"/>
+      </g>
+    </g>
+  </g>
+</svg>

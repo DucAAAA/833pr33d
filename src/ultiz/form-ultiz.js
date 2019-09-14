@@ -17,9 +17,17 @@ export const addCommas = value => {
 /*
   Handle transalte error from YUP by language
   Mặc định lỗi lấy theo namespace common
-
-
-  #TODO cần cải tiến lại
+  format error:
+    code number attribute
+    -> code: code status in common:errors
+    -> number: value of attribues, example: must be 200 character . In fact: is `secondAttr` in locate file
+    -> attribue: attribue like `email`, `password`. In face: is `attr` in locate file
+    -> result dependency format that defined in en.yml or ja.yml
+    -> format must recommend is: status_code: {attri -> attribute} ...... {secondAttr -> number}
+    -> Example:
+    -> locate file: 601: {attr} must be than {secondattr} symbols.
+    -> input data (value): 601 256 email
+    -> result in GUI: email must be than 256 symbols
 */
 export const tError = (value, namespace="common") => {
   const message = typeof value === 'string' ? value.match(/\D+/g) : '' //lấy string từ mess
