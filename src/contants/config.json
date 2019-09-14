@@ -16,7 +16,7 @@
   },
   "production": {
     "environmentConfig": {
-      "entryPoint": "https://www.deepread.ai/api/v3"
+      "entryPoint": "https://www.stage.deepread.ai/api/v3"
     }
   }
 }

@@ -5,13 +5,17 @@ import config from '../../contants/config.json'
 import history from "../history"
 
 const entryPointByEnv = () => {
-  let env = "development"
+  let env = "local"
   if (process.env.FRAMGIA_STAGING) {
     env = "sunasterisk_staging"
   } else {
-    env = process.env.RAILS_ENV || "local"
+    env = process.env.RAILS_ENV || "staging"
   }
-  console.log("Entry point: ", config[env].environmentConfig.entryPoint)
+
+  if(!(process.env.RAILS_ENV === "production")) {
+    console.log("Entry point: ", config[env].environmentConfig.entryPoint)
+    console.log("Environment variable:", env)
+  }
   return config[env].environmentConfig.entryPoint
 }
 

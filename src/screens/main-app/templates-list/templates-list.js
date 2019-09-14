@@ -1,10 +1,19 @@
 import React from "react"
 
-import styles from './styles.module.css'
+import Navigation from "../../../components/navigation"
+import Toolbar from "../../../components/layouts/toolbar"
 
-const TemplateList = props => {
+import styles from './templates-list.module.css'
+
+const TemplateList = () => {
   return (
-    <div>Template list</div>
+    <React.Fragment>
+      <Navigation />
+      <Toolbar> Tun bar</Toolbar>
+      <div className={styles.content}>
+        Template list
+      </div>
+    </React.Fragment>
   )
 }
 

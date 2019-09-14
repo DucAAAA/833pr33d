@@ -1,13 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Route } from 'react-router-dom'
 
 import { authSelector } from '../../selectors/auth-selector'
 
-const SwichRoute = ({component: Component, isAuth, ...rest }) => {
-  if(isAuth) return <Redirect to='/templates' />
+import NotFound from "../../screens/commons/404-not-found"
 
-  return <Redirect to='/home' />
+const SwichRoute = ({component: Component, isAuth, ...rest }) => {
+  if(rest.location.pathname === "/") {
+    if(isAuth) return <Redirect to='/templates' />
+
+    return <Redirect to='/home' />
+  }
+
+  return <Route component={NotFound} />
 }
 
 export default connect(authSelector, null)(SwichRoute)
