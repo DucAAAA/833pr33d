@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import history from "../../services/history"
-import DropDown from "../ui/dropdown"
-import IconMoon from "../ui/iconmoon"
+import history from "services/history"
+import DropDown from "components/ui/dropdown"
+import IconMoon from "components/ui/iconmoon"
 
 import styles from "./navigation.module.scss"
-import logo from "../../assests/images/logo.svg"
-import profile from "../../assests/images/default-avatar.png"
+import logo from "assests/images/logo.svg"
+import profile from "assests/images/default-avatar.png"
 
 const Navigation = () => {
   const dropdownSetting = [

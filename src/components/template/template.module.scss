@@ -1,0 +1,60 @@
+.dot3 {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 25%;
+
+  li {
+    font-weight: normal;
+  }
+}
+
+.templateItem {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(40, 40, 46, 0.16);
+  cursor: pointer;
+  height: 19.2rem;
+  position: relative;
+  width: 26.2rem;
+
+  &:hover {
+    .dot3 {
+      display: block;
+    }
+  }
+}
+
+.imageContainer {
+  background-color: rgba(241, 241, 243, 0.75);
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 12rem;
+  overflow: hidden;
+  padding: 1.6rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footerContainer {
+  align-content: center;
+  border: 0.1rem solid #e7e9ea;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  height: 7.2rem;
+  padding: 1rem 1.6rem;
+  position: relative;
+}
+
+.templateTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.templateName {
+  color: var(--black);
+  font-weight: bold;
+}

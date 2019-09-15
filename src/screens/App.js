@@ -3,24 +3,25 @@ import { Provider } from "react-redux"
 import { Switch, Route, Router } from "react-router-dom"
 import { PersistGate } from "redux-persist/integration/react"
 
-import history from "../services/history"
-import { store, persistor } from "../services/store"
+import history from "services/history"
+import { store, persistor } from "services/store"
 
-import PrivateRoute from "../components/Routes/PrivateRoute"
-import PublicRoute from "../components/Routes/PublicRoute"
-import SwichRoute from "../components/Routes/SwichRoute"
+import PrivateRoute from "components/Routes/PrivateRoute"
+import PublicRoute from "components/Routes/PublicRoute"
+import SwichRoute from "components/Routes/SwichRoute"
 
 import Login from "./main-app/login"
 import LandingPage from "./commons/landing-page"
-import TemplateList from "./main-app/templates-list"
-import TaskList from "./main-app/tasks-list"
-import UserManagement from "./main-app/user-management"
-import IpManagement from "./main-app/ip-management"
-import Profile from "./main-app/profile"
-import UsageSituation from "./main-app/usage-situation"
-import MainLayout from "../components/layouts/main-layout"
+import TemplateList from "screens/main-app/templates-list"
+import TaskList from "screens/main-app/tasks-list"
+import UserManagement from "screens/main-app/user-management"
+import IpManagement from "screens/main-app/ip-management"
+import Profile from "screens/main-app/profile"
+import UsageSituation from "screens/main-app/usage-situation"
+import MainLayout from "components/layouts/main-layout"
+import DemoUi from "screens/demo-ui"
 
-import "./App.css";
+import "screens/App.css";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               <PrivateRoute exect path="/ip-restrictions" layout={MainLayout} component={IpManagement} />
               <PublicRoute exect path="/login" component={Login} />
               <Route exect path="/home" component={LandingPage} />
+              {!(process.env.RAILS_ENV === "production") && <Route exect path="/demo-ui" component={DemoUi} />}
               <SwichRoute exect path="/" />
 
             </Switch>

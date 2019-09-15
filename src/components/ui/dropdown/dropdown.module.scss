@@ -1,11 +1,14 @@
 @import '../../../assests/mixin.scss';
 
 .dropdownLev1 {
+  background: var(--white);
+  border-radius: 0.2rem;
   display: none;
   position: absolute;
   right: -1rem;
   top: 4.6rem;
   width: 18.8rem;
+  z-index: 500;
 
   &::before,
   &::after {
@@ -65,7 +68,7 @@
     padding: 0 1.6rem;
 
     &:hover {
-      background: rgba(13, 166, 208, 0.06);
+      background: rgba(13, 166, 208, 0.08);
 
       .dropdownLev2 {
         display: block;
@@ -76,4 +79,8 @@
 
 .dropdownContainerLev2 {
   position: relative;
+}
+
+.lineBottom {
+  border-bottom: 1px solid #ccc;
 }
