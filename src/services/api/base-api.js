@@ -34,7 +34,7 @@ export default class API {
     })
 
     this.client.interceptors.request.use(function(config){
-      config.headers['X-Skyrec-Access-Token'] = localStorage.getItem('access_token')
+      config.headers['X-Skyrec-Access-Token'] = JSON.parse(localStorage.getItem('user_token')).token
       return config
     })
 

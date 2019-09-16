@@ -18,5 +18,8 @@
   "login": {
     "btn submit": "Login",
     "forgot password": "I forgot my password"
+  },
+  "dashboard": {
+    
   }
 }

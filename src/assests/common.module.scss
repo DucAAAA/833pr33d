@@ -1,0 +1,27 @@
+.toolbarContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumb {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tools {
+  align-items: center;
+  display: flex;
+}
+
+.verticalLine {
+  background-color: #9b9ea3;
+  height: 2.5rem;
+  margin: 0 1.5rem;
+  width: 0.1rem;
+}
+
+.marginLeftNone {
+  margin-left: 0;
+}

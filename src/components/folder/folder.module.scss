@@ -1,0 +1,42 @@
+.dot3 {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 25%;
+
+  li {
+    font-weight: normal;
+  }
+}
+
+.folderContainer {
+  align-content: center;
+  border: 0.1rem solid #e7e9ea;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(40, 40, 46, 0.16);
+  cursor: pointer;
+  display: flex;
+  height: 7.2rem;
+  padding: 1rem 1.6rem;
+  position: relative;
+  width: 26rem;
+
+  &:hover {
+    .dot3 {
+      display: block;
+    }
+  }
+}
+
+.folderTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.folderName {
+  color: var(--black);
+  font-weight: bold;
+}
