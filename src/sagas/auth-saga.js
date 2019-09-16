@@ -10,8 +10,8 @@ function* loginSaga(action) {
   yield formikSaga(action, function*(values) {
     const response = yield call([AuthApi, AuthApi.signin], values)
     yield put(updateStateAuth({ user: response.data, isAuth: true }))
-    yield localStorage.setItem('user_token', JSON.stringify(response.data.user_token))
-    yield localStorage.setItem('user', JSON.stringify(response.data.current_user))
+    yield localStorage.setItem('user_token', JSON.stringify(response.data.userToken))
+    yield localStorage.setItem('user', JSON.stringify(response.data.currentUser))
 
     yield history.push('/templates')
   })

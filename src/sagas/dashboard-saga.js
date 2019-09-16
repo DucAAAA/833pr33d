@@ -6,9 +6,9 @@ import { getDashboardAction, updateDashboardState } from "actions/dashboard-acti
 
 function* getDashboardSaga(action) {
   console.log(action)
-  const res = yield call([DashboardApi, DashboardApi.getDashboard], action.payload.page)
+  const res = yield call([DashboardApi, DashboardApi.getDashboard], {page: action.payload.page})
   console.log(res)
-  yield put(updateDashboardState({ recent_templates: res.data.recent_templates, list: res.data.list}))
+  yield put(updateDashboardState({ recentTemplates: res.data.recentTemplates, list: res.data.list}))
 }
 
 export default function*() {

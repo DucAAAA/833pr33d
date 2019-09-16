@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+}
+
+.row {
+  border-bottom: 0.1rem solid #e7e9ea;
+  height: 4rem;
+  padding: 1rem;
+  position: relative;
+
+  td {
+    padding-left: 1rem;
+  }
+}
+
+.header {
+  background-color: #fafafa;
+}
+
+.templatename {
+  display: flex;
+
+  div {
+    margin-left: 0.5rem;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { compose, lifecycle } from "recompose"
+import { compose, lifecycle, withState } from "recompose"
 import { withTranslation } from "react-i18next"
 import InfiniteScroll from "react-infinite-scroll-component"
 
@@ -22,7 +22,7 @@ const TemplateList = (props) => {
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
-        <FileManager recentTemplates={props.recent_templates} list={props.list}/>
+        <FileManager firstRender={props.firstRender} recentTemplates={props.recent_templates} list={props.list}/>
       </InfiniteScroll>
     </React.Fragment>
   )

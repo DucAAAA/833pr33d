@@ -36,13 +36,13 @@ const Template = props => {
     <div className={styles.templateContainer}>
       <div className={styles.templateItem}>
         <div className={styles.imageContainer}>
-          <img src={item.image_url} alt="template"/>
+          <img src={item.imageUrl} alt="template"/>
         </div>
         <div className={styles.footerContainer}>
           <img src={templateIcon} alt="template"/>
           <div className={styles.templateTitle}>
             <span className={styles.templateName}>{item.title}</span>
-            <span className={styles.templateAuthor}>{item.last_modified}</span>
+            <span className={styles.templateAuthor}>{item.lastModified}</span>
             <div className={styles.dot3} >
               <Dropdown data={dropdown} height="3.2rem" inlineStyle={{top: "2.6rem", right: "-2rem"}}>
                 <IconMoon color="#0da6d0" icon="three-dots" size={26} />

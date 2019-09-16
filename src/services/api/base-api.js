@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { notification as toast } from 'antd';
 
+import { toCamelCase } from "ultiz/ultiz"
 import config from '../../contants/config.json'
 import history from "../history"
 
@@ -33,12 +34,15 @@ export default class API {
       config
     })
 
+    this.adapterAlias = {}
+
     this.client.interceptors.request.use(function(config){
       config.headers['X-Skyrec-Access-Token'] = localStorage.getItem('user_token') && JSON.parse(localStorage.getItem('user_token')).token
       return config
     })
 
     this.client.interceptors.response.use( res => {
+      if(res.data) res.data = toCamelCase(res.data, this.adapterAlias)
       return res
     }, function(err) {
       if(err.response.status === 401) {
