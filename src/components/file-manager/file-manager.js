@@ -10,13 +10,14 @@ import Template from "components/template"
 import Folder from "components/folder"
 import IconMoon from "components/ui/iconmoon"
 import Button from "components/ui/button"
+import TemplateSkeletonLoading from "components/template-skeleton-loading"
 
 import styles from './file-manager.module.scss'
 import commons from "assests/common.module.scss"
 import blankItem from "assests/images/get-started.svg"
 
 const FileManager = props => {
-  const { list } = props
+  const { list, firstRender } = props
   const recentTemplates = props.recentTemplates || []
   const listTemplate = list.filter(i => i.type === "template")
   const listFolder = list.filter(i => i.type === "folder")
@@ -43,7 +44,8 @@ const FileManager = props => {
           </div>
         </div>
       </Toolbar>
-      <div className={styles.content}>
+      <div className={commons.mainContent}>
+        {firstRender && (<TemplateSkeletonLoading />)}
         {!isEmpty(recentTemplates) && (
           <div className={styles.recentContainer}>
             <div className={cx(styles.containerHeader, styles.recentHeader)}>
@@ -89,7 +91,7 @@ const FileManager = props => {
             </React.Fragment>
           )
         }
-        {isEmpty(list) && isEmpty(recentTemplates) && (
+        {!firstRender && isEmpty(list) && isEmpty(recentTemplates) && (
           <div className={styles.blankzone}>
             <img src={blankItem} alt="blank templates" width="300px"/>
             <h2>Create Template</h2>

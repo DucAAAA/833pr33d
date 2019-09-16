@@ -4,7 +4,8 @@ import { updateDashboardState, resetDashboardState } from 'actions/dashboard-act
 
 export const initialState = {
   list: [],
-  recent_templates: []
+  recent_templates: [],
+  firstRender: true
 };
 
 export default handleActions({
@@ -12,7 +13,8 @@ export default handleActions({
     return {
       ...state,
       list: state.list.concat(action.payload.list),
-      recent_templates: [...action.payload.recent_templates]
+      recent_templates: [...action.payload.recent_templates],
+      firstRender: false
     }
   },
   [resetDashboardState]: () => ({ ...initialState })
