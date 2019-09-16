@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 
-import { updateDashboardState } from 'actions/dashboard-action'
+import { updateDashboardState, resetDashboardState } from 'actions/dashboard-action'
 
 export const initialState = {
   list: [],
@@ -10,7 +10,10 @@ export const initialState = {
 export default handleActions({
   [updateDashboardState]: (state, action) => {
     return {
-      ...state, ...action.payload
+      ...state,
+      list: state.list.concat(action.payload.list),
+      recent_templates: [...action.payload.recent_templates]
     }
-  }
+  },
+  [resetDashboardState]: () => ({ ...initialState })
 }, initialState);
