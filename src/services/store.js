@@ -8,6 +8,7 @@ import rootReducer from '../reducers/root-reducer'
 
 const persistConfig = {
   key: "root",
+  whitelist: ['auth'],
   storage
 }
 

@@ -1,0 +1,78 @@
+
+.containerHeaderLoading {
+  h2 {
+    background: #dcddde;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 2.5rem;
+    width: 100px;
+  }
+}
+
+.containerItemsLoading {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemLoading {
+  margin-bottom: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.templateItemLoading {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(40, 40, 46, 0.16);
+  height: 19.2rem;
+  position: relative;
+  width: 26.2rem;
+}
+
+.imageContainerLoading {
+  background-color: rgba(241, 241, 243, 0.75);
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 12rem;
+  padding: 1.6rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footerContainerLoading {
+  align-content: center;
+  border: 0.1rem solid #e7e9ea;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  height: 7.2rem;
+  padding: 1rem 1.6rem;
+  position: relative;
+}
+
+.templateTitleLoading {
+  background: #dcddde;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.templateNameLoading {
+  background: #dcddde;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+.imageContentLoading {
+  background: #dcddde;
+  border-radius: 0.3rem;
+  height: 100%;
+  width: 100%;
+}
+
+.iconLoading {
+  background: #dcddde;
+  border-radius: 0.3rem;
+  width: 45px;
+}
