@@ -10477,6 +10477,7 @@ react-i18next@^10.11.5:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
 
+<<<<<<< 53529e0b6e7b2c4b43af64cc003384fda601eae0
 react-image-crop@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/react-image-crop/-/react-image-crop-8.4.0.tgz#48cba2a30f2a27a6a13afa5867843bdc8c6b8a1b"
@@ -10485,6 +10486,12 @@ react-image-crop@^8.4.0:
     clsx "^1.0.4"
     core-js "^3.3.3"
     prop-types "^15.7.2"
+=======
+react-infinite-scroll-component@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroll-component/-/react-infinite-scroll-component-4.5.3.tgz#008c2ec358628b490117ffc4aa6ce6982b26f8be"
+  integrity sha512-8O0PIeYZx0xFVS1ChLlLl/1obn64vylzXeheLsm+t0qUibmet7U6kDaKFg6jVRQJwDikWBTcyqEFFsxrbFCO5w==
+>>>>>>> [PR4]
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.6, react-is@^16.9.0:
   version "16.9.0"

@@ -1,7 +1,7 @@
 import BaseApi from "./base-api"
 
 class Dashboard extends BaseApi {
-  getDashboard = params => this.client.get("/dashboard", params)
+  getDashboard = page => this.client.get("/dashboard", { params: { page: page } })
 }
 
 export const DashboardApi = new Dashboard()
