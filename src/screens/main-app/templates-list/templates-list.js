@@ -12,7 +12,6 @@ import FileManager from "components/file-manager"
 
 let page = 0;
 const TemplateList = (props) => {
-  console.log('first', props)
   return (
     <React.Fragment>
       <Navigation />
@@ -20,9 +19,8 @@ const TemplateList = (props) => {
         dataLength={props.list.length}
         next={() => props.getDashboardAction({page: page++})}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
       >
-        <FileManager recentTemplates={props.recent_templates} list={props.list}/>
+        <FileManager firstRender={props.firstRender} recentTemplates={props.recent_templates} list={props.list}/>
       </InfiniteScroll>
     </React.Fragment>
   )
@@ -33,7 +31,7 @@ export default compose(
   connect(dashboardSelector, { getDashboardAction, resetDashboardState }),
   lifecycle({
     componentDidMount() {
-      console.log('component')
+      document.title = "DEEP READ | Template List"
       this.props.resetDashboardState();
       this.props.getDashboardAction({page: page++})
     }
