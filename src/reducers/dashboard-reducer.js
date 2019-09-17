@@ -14,7 +14,7 @@ export default handleActions({
     return {
       ...state,
       list: state.list.concat(action.payload.list),
-      recent_templates: [...action.payload.recentTemplates],
+      recent_templates: state.recent_templates.concat(action.payload.recentTemplates),
       firstRender: false
     }
   },

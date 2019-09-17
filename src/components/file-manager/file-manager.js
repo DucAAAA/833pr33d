@@ -1,9 +1,7 @@
 import React from "react"
 import cx from "classnames"
-import { connect } from "react-redux"
-import { compose, withState } from "recompose"
+import { compose, withHandlers } from "recompose"
 import { isEmpty } from "lodash"
-import { withTranslation } from "react-i18next"
 
 import Table from "./table"
 import Toolbar from "components/layouts/toolbar"
@@ -17,15 +15,13 @@ import { dashboardColumns } from "contants/table-columns"
 import styles from './file-manager.module.scss'
 import commons from "assests/common.module.scss"
 import blankItem from "assests/images/get-started.svg"
-import tables from "./table.module.scss"
 
 const FileManager = props => {
-  const { list, firstRender } = props
+  const { list, firstRender, modeView } = props
   const recentTemplates = props.recentTemplates || []
   const listTemplate = list.filter(i => i.type === "template")
   const listFolder = list.filter(i => i.type === "folder")
-  console.log(listTemplate)
-  console.log(listFolder)
+
   return (
     <React.Fragment>
       <Toolbar>
@@ -53,11 +49,20 @@ const FileManager = props => {
           <div className={styles.recentContainer}>
             <div className={cx(styles.containerHeader, styles.recentHeader)}>
               <h2>Recent Items</h2>
-              <Button onClick={() => props.setIsItemMode(!props.isItemMode)} height={24} iconSize={20} icon={props.isItemMode ? "list-thumb" : "list"} type="default" noneResize={true}>View mode</Button>
+              <Button
+                onClick={props.setViewMode}
+                height={24}
+                iconSize={20}
+                icon={modeView}
+                type="default"
+                noneResize={true}
+              >
+                View mode
+              </Button>
             </div>
             <div className={styles.containerItems}>
               {recentTemplates.map((item, idx) => (
-                <div key={idx} className={styles.item}>
+                <div onDoubleClick={() => console.log('db')}  key={idx} className={styles.item}>
                   <Template item={item}/>
                 </div>
               ))}
@@ -65,7 +70,7 @@ const FileManager = props => {
           </div>
         )}
         {
-          !isEmpty(listTemplate) && !isEmpty(listFolder) && props.isItemMode && (
+          !isEmpty(listTemplate) && !isEmpty(listFolder) && modeView !== "list" && (
             <React.Fragment>
             <div className={styles.foldersContainer}>
             <div className={styles.containerHeader}>
@@ -94,7 +99,7 @@ const FileManager = props => {
                 </React.Fragment>
                 )
               }
-        {!props.isItemMode && <Table dataSource={[...listFolder, ...listTemplate]} rowKey="id" columns={dashboardColumns} />}
+        {modeView === "list" && <Table dataSource={[...listFolder, ...listTemplate]} rowKey="id" columns={dashboardColumns} />}
         {!firstRender && isEmpty(list) && isEmpty(recentTemplates) && (
           <div className={styles.blankzone}>
             <img src={blankItem} alt="blank templates" width="300px"/>
@@ -109,6 +114,14 @@ const FileManager = props => {
 }
 
 export default compose(
-  withState("isItemMode", "setIsItemMode", true)
+  withHandlers({
+    setViewMode: props => () => {
+      if(props.modeView === "list") {
+        props.changeViewMode("list-thumb")
+      } else {
+        props.changeViewMode("list")
+      }
+    }
+  })
 )
 (FileManager)

@@ -30,7 +30,7 @@ const Folder = props => {
     <div className={styles.folderContainer}>
       <img src={folderIcon} alt="folder"/>
       <div className={styles.folderTitle}>
-        <span className={styles.folderName}>{item.title}</span>
+        <span className={styles.folderName}>{item.title}-{item.id}</span>
         <span className={styles.templateAuthor}>{item.lastModified}</span>
         <div className={styles.dot3} >
           <Dropdown data={dropdown} height="3.2rem" inlineStyle={{top: "2.6rem", right: "-1rem"}}>

@@ -1,12 +1,16 @@
 import React from "react"
 import cx from "classnames"
 
+import SortIcon from "components/ui/sort-icon"
+
 import styles from "./table.module.scss"
 
 const Table = props => {
   const { dataSource, rowKey, columns } = props
 
-  const renderRow = columns.map((col, idx) => <th className={cx(styles.header, styles.row)} key={idx}>{col.title}</th>)
+  const renderRow = columns.map((col, idx) => <th className={cx(styles.header, styles.row)} key={idx}>
+    <div className={styles.flex}><span>{col.title}</span><SortIcon up={true}/></div></th>)
+
   const renderData = dataSource.map(record => (
     <tr key={record[rowKey]} className={styles.row}>
       {columns.map((col, colx) => {
