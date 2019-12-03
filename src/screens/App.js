@@ -13,6 +13,7 @@ import SwichRoute from "components/Routes/SwichRoute"
 import Login from "./main-app/login"
 import LandingPage from "./commons/landing-page"
 import TemplateList from "screens/main-app/templates-list"
+import TemplateDetail from "./main-app/template-detail"
 import TaskList from "screens/main-app/tasks-list"
 import UserManagement from "screens/main-app/user-management"
 import IpManagement from "screens/main-app/ip-management"
@@ -34,6 +35,7 @@ function App() {
               <PrivateRoute exect path="/profile" layout={MainLayout} component={Profile} />
               <PrivateRoute exect path="/usage" layout={MainLayout} component={UsageSituation} />
               <PrivateRoute exect path="/users" layout={MainLayout} component={UserManagement} />
+              <PrivateRoute exect path="/templates/:templateId" layout={MainLayout} component={TemplateDetail} />
               <PrivateRoute exect path="/templates" layout={MainLayout} component={TemplateList} />
               <PrivateRoute exect path="/ip-restrictions" layout={MainLayout} component={IpManagement} />
               <PublicRoute exect path="/login" component={Login} />

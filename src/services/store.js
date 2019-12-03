@@ -8,7 +8,8 @@ import rootReducer from '../reducers/root-reducer'
 
 const persistConfig = {
   key: "root",
-  storage
+  storage,
+  blacklist: ['dashboard']
 }
 
 const sagaMiddleware = createSagaMiddleware()

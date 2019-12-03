@@ -6,8 +6,8 @@ import { authSelector } from '../../selectors/auth-selector'
 
 const PrivateRoute = ({component: Component, layout: MainLayout, isAuth, ...rest }) => {
   if(isAuth) return (
-    <Route {...rest} render={() => (
-        <MainLayout><Component/></MainLayout>
+    <Route {...rest} render={({ match }) => (
+        <MainLayout><Component {...match}/></MainLayout>
       )}
     />
   )
