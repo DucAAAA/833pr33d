@@ -7,7 +7,7 @@ import history from "../history"
 const entryPointByEnv = () => {
   let env = "local"
   if (process.env.FRAMGIA_STAGING) {
-    env = "sunasterisk_staging"
+    env = "local"
   } else {
     env = process.env.RAILS_ENV || "staging"
   }
@@ -34,13 +34,14 @@ export default class API {
     })
 
     this.client.interceptors.request.use(function(config){
-      config.headers['X-Skyrec-Access-Token'] = JSON.parse(localStorage.getItem('user_token')).token
+      config.headers['X-Skyrec-Access-Token'] = localStorage.getItem('user_token') ? JSON.parse(localStorage.getItem('user_token')).token : ''
       return config
     })
 
     this.client.interceptors.response.use( res => {
       return res
     }, function(err) {
+      console.log(err)
       if(err.response.status === 401) {
         localStorage.removeItem('persist:root')
         toast.error({
