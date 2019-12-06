@@ -7,7 +7,7 @@ import styles from "./template.module.scss"
 import templateIcon from "assests/images/template-icon.svg"
 
 const Template = props => {
-  const { data } = props
+  const { item } = props
   const dropdown = [
     {
       label: "Detail",
@@ -36,13 +36,13 @@ const Template = props => {
     <div className={styles.templateContainer}>
       <div className={styles.templateItem}>
         <div className={styles.imageContainer}>
-          <img src={data.image_url} alt="template"/>
+          <img src={item.image_url} alt="template"/>
         </div>
         <div className={styles.footerContainer}>
           <img src={templateIcon} alt="template"/>
           <div className={styles.templateTitle}>
-            <span className={styles.templateName}>{data.title}</span>
-            <span className={styles.templateAuthor}>{data.last_modified}</span>
+            <span className={styles.templateName}>{item.title}</span>
+            <span className={styles.templateAuthor}>{item.last_modified}</span>
             <div className={styles.dot3} >
               <Dropdown data={dropdown} height="3.2rem" inlineStyle={{top: "2.6rem", right: "-2rem"}}>
                 <IconMoon color="#0da6d0" icon="three-dots" size={26} />
