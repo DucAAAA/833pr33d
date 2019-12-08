@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 
-import { updateTemplateState } from 'actions/template-action'
+import { updateTemplateState } from 'actions/template.action'
 
 export const initialState = {
   template: {}

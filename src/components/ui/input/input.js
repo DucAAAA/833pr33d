@@ -1,12 +1,12 @@
 import React from "react"
-import { Input } from 'antd';
+// import { Input } from 'antd';
 
-import styles from "./styles.module.scss"
+import styles from "./input.module.scss"
 
-const DRInput = props => {
+const Input = props => {
   return(
-    <Input {...props} />
+    <input {...props} />
   )
 }
 
-export default DRInput
+export default Input

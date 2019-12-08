@@ -1,22 +1,14 @@
 {
   "local": {
-    "environmentConfig": {
-      "entryPoint": "http://localhost:3000/api/v3"
-    }
+    "entryPoint": "http://localhost:3000/api/v3"
   },
   "sunasterisk_staging": {
-    "environmentConfig": {
-      "entryPoint": "https://skrc.sun-asterisk.vn/api/v3"
-    }
+    "entryPoint": "https://skrc.sun-asterisk.vn/api/v3"
   },
   "staging": {
-    "environmentConfig": {
-      "entryPoint": "https://stage.deepread.ai/api/v3"
-    }
+    "entryPoint": "https://stage.deepread.ai/api/v3"
   },
   "production": {
-    "environmentConfig": {
-      "entryPoint": "https://www.stage.deepread.ai/api/v3"
-    }
+    "entryPoint": "https://www.stage.deepread.ai/api/v3"
   }
 }

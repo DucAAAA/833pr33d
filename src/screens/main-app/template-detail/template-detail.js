@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 import { compose, lifecycle } from "recompose"
 import Cropper from 'react-cropper'
 
-import { getTemplateAction } from "actions/template-action"
+import { getTemplateAction } from "actions/template.action"
 import { templateSelector } from "selectors/template-selector"
 
 import styles from './template-detail.module.scss'

@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next"
 import InfiniteScroll from "react-infinite-scroll-component"
 
 import { dashboardSelector } from "selectors/dashbroad-selector"
-import { getDashboardAction, resetDashboardState } from "actions/dashboard-action"
+import { getDashboardAction, resetDashboardState } from "actions/dashboard.action"
 
 import Navigation from "components/navigation"
 import FileManager from "components/file-manager"

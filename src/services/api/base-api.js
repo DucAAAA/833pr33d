@@ -6,17 +6,13 @@ import history from "../history"
 
 const entryPointByEnv = () => {
   let env = "local"
-  if (process.env.FRAMGIA_STAGING) {
-    env = "local"
-  } else {
-    env = process.env.RAILS_ENV || "staging"
-  }
+  const env = process.env.FRAMGIA_STAGING ? "local" : process.env.RAILS_ENV
 
-  if(!(process.env.RAILS_ENV === "production")) {
-    console.log("Entry point: ", config[env].environmentConfig.entryPoint)
+  if(env !== "production") {
+    console.log("Entry point: ", config[env].entryPoint)
     console.log("Environment variable:", env)
   }
-  return config[env].environmentConfig.entryPoint
+  return config[env].entryPoint
 }
 
 const DEFAULT_API_CONFIG: AxiosRequestConfig = {
@@ -33,12 +29,12 @@ export default class API {
       config
     })
 
-    this.client.interceptors.request.use(function(config){
+    this.client.interceptors.request.use(config => {
       config.headers['X-Skyrec-Access-Token'] = localStorage.getItem('user_token') && JSON.parse(localStorage.getItem('user_token')).token
       return config
     })
 
-    this.client.interceptors.response.use( res => {
+    this.client.interceptors.response.use(res => {
       return res
     }, function(err) {
       console.log(err)
