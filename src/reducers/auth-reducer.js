@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 
-import { clearStateAuth, updateStateAuth } from '../actions/auth-action'
+import { clearStateAuth, updateStateAuth } from '../actions/auth.action'
 
 export const initialState = {
   isAuth: false

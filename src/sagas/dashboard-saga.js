@@ -2,7 +2,7 @@ import { takeLatest, all, put, call } from 'redux-saga/effects';
 
 import { DashboardApi } from 'services/api/dashboard-api'
 
-import { getDashboardAction, updateDashboardState } from "actions/dashboard-action"
+import { getDashboardAction, updateDashboardState } from "actions/dashboard.action"
 
 function* getDashboardSaga(action) {
   console.log(action)

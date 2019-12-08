@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-recommended", "stylelint-config-standard"],
+  "extends": ["stylelint-config-recommended", "stylelint-config-standard", "stylelint-config-recommended", "stylelint-config-styled-components"],
   "plugins": ["stylelint-order"],
   "rules": {
     "order/order": ["custom-properties", "declarations"],

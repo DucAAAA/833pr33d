@@ -4,7 +4,7 @@ import history from '../services/history'
 import { AuthApi } from '../services/api/auth-api'
 import { formikSaga } from '../ultiz/form-ultiz'
 
-import { loginAction, updateStateAuth } from '../actions/auth-action'
+import { loginAction, updateStateAuth } from '../actions/auth.action'
 
 function* loginSaga(action) {
   yield formikSaga(action, function*(values) {

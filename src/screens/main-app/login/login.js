@@ -7,7 +7,7 @@ import { withTranslation } from "react-i18next"
 import { Form, Input, Button } from 'antd'
 
 // import { Input, Button } from "../../../components/ui"
-import { loginAction } from '../../../actions/auth-action'
+import { loginAction } from '../../../actions/auth.action'
 import { statusError, tError} from "../../../ultiz/form-ultiz"
 
 import styles from './style.module.scss'
