@@ -2,6 +2,7 @@ import React, { Suspense } from "react"
 import { Provider } from "react-redux"
 import { Switch, Route, Router } from "react-router-dom"
 import { PersistGate } from "redux-persist/integration/react"
+import { ThemeProvider } from "styled-components"
 
 import history from "services/history"
 import { store, persistor } from "services/store"
@@ -21,6 +22,7 @@ import Profile from "screens/main-app/profile"
 import UsageSituation from "screens/main-app/usage-situation"
 import MainLayout from "components/layouts/main-layout"
 import DemoUi from "screens/demo-ui"
+import defaultTheme from "assests/theme"
 
 import "screens/App.css";
 
@@ -29,22 +31,23 @@ function App() {
     <Suspense fallback={false}>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <Router history={history}>
-            <Switch>
-              <PrivateRoute exect path="/tasks" layout={MainLayout} component={TaskList} />
-              <PrivateRoute exect path="/profile" layout={MainLayout} component={Profile} />
-              <PrivateRoute exect path="/usage" layout={MainLayout} component={UsageSituation} />
-              <PrivateRoute exect path="/users" layout={MainLayout} component={UserManagement} />
-              <PrivateRoute exect path="/templates/:templateId" layout={MainLayout} component={TemplateDetail} />
-              <PrivateRoute exect path="/templates" layout={MainLayout} component={TemplateList} />
-              <PrivateRoute exect path="/ip-restrictions" layout={MainLayout} component={IpManagement} />
-              <PublicRoute exect path="/login" component={Login} />
-              <Route exect path="/home" component={LandingPage} />
-              {!(process.env.RAILS_ENV === "production") && <Route exect path="/demo-ui" component={DemoUi} />}
-              <SwichRoute exect path="/" />
-
-            </Switch>
-          </Router>
+          <ThemeProvider theme={defaultTheme}>
+            <Router history={history}>
+              <Switch>
+                <PrivateRoute exect path="/tasks" layout={MainLayout} component={TaskList} />
+                <PrivateRoute exect path="/profile" layout={MainLayout} component={Profile} />
+                <PrivateRoute exect path="/usage" layout={MainLayout} component={UsageSituation} />
+                <PrivateRoute exect path="/users" layout={MainLayout} component={UserManagement} />
+                <PrivateRoute exect path="/templates/:templateId" layout={MainLayout} component={TemplateDetail} />
+                <PrivateRoute exect path="/templates" layout={MainLayout} component={TemplateList} />
+                <PrivateRoute exect path="/ip-restrictions" layout={MainLayout} component={IpManagement} />
+                <PublicRoute exect path="/login" component={Login} />
+                <Route exect path="/home" component={LandingPage} />
+                {!(process.env.RAILS_ENV === "production") && <Route exect path="/demo-ui" component={DemoUi} />}
+                <SwichRoute exect path="/" />
+              </Switch>
+            </Router>
+          </ThemeProvider>
         </PersistGate>
       </Provider>
     </Suspense>
